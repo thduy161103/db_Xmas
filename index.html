@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Merry Christmas</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div id="as" class="christmas-message">Merry Christmas</div>
+
+    <div class="image-frame">
+      <img src="circle.png" alt="Circle Frame" class="circle-frame" />
+      <img src="embe.jpeg" alt="Embe" class="profile-image" />
+    </div>
+
+    <div class="tree-container">
+      <img src="big_tree.png" alt="Christmas Tree" class="tree-icon" />
+    </div>
+
+    <div class="login-container">
+      <form id="loginForm" class="login-form">
+        <div class="form-group">
+          <label for="question">Em là ai?</label>
+          <input
+            type="password"
+            id="password"
+            placeholder="Nhập vào là &#34;embe cua HoangDuy&#34; nha"
+            required
+          />
+        </div>
+        <button type="submit" id="submitBtn">
+          Nhập xong rồi thì nhấn vào đây nè
+        </button>
+      </form>
+    </div>
+
+    <script>
+      document
+        .getElementById("loginForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          const password = document.getElementById("password").value;
+
+          if (password === "embe cua HoangDuy") {
+            window.location.href = "home.html";
+          } else {
+            alert("Password không đúng rồi!");
+          }
+        });
+    </script>
+  </body>
+</html>
